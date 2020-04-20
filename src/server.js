@@ -24,6 +24,7 @@ app.post("/api/v1/getback", (req, res) => {
   res.send({ ...req.body });
 });
 
-app.listen(3001, () =>
+const port = process.env.port || 3001;
+app.listen(port, () =>
   console.log("Express server is running on localhost:3001")
 );
